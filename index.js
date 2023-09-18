@@ -155,7 +155,7 @@ mongoose
   .connect(MONGO_URL)
   .then(
     app.listen(3001, () => {
-      console.log(`Server is running on port 5000`);
+      console.log(`Server is running on port 3001`);
     })
   )
   .catch((err) => {
