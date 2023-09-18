@@ -18,6 +18,10 @@ const allowOrigins = [
   "http://localhost:3000/login",
   "http://localhost:3000/signup",
   "http://localhost:3000/dashboard",
+  "https://savepdfhoney.netlify.app/",
+  "https://savepdfhoney.netlify.app/login",
+  "https://savepdfhoney.netlify.app/signup",
+  "https://savepdfhoney.netlify.app/dashboard",
 ];
 
 app.use(express.json());
