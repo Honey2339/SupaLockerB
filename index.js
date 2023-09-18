@@ -154,7 +154,7 @@ app.post("/api/file/delete/:filename", async (req, res) => {
 mongoose
   .connect(MONGO_URL)
   .then(
-    app.listen(5000, () => {
+    app.listen(3001, () => {
       console.log(`Server is running on port 5000`);
     })
   )
