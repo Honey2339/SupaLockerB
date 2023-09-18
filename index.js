@@ -87,6 +87,7 @@ app.post("/api/upload", upload.single("file"), async (req, res) => {
 app.get("/api/user/files", async (req, res) => {
   try {
     const username = req.cookies.username;
+    console.log(username)
     const user = await User.findOne({ username });
     if (!user) {
       return res.status(400).send({ msg: "User Not Found" });
