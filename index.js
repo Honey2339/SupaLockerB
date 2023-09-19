@@ -101,7 +101,7 @@ app.post("/api/user/files", async (req, res) => {
 
 app.post("/api/file/download/:filename", async (req, res) => {
   try {
-    const username = req.cookies.username;
+    const username = req.body.username;
     const user = await User.findOne({ username });
     if (!user) {
       return res.status(400).send({ msg: "User Not Found" });
@@ -127,7 +127,7 @@ app.post("/api/file/download/:filename", async (req, res) => {
 
 app.post("/api/file/delete/:filename", async (req, res) => {
   try {
-    const username = req.cookies.username;
+    const username = req.body.username;
     const user = await User.findOne({ username });
     if (!user) {
       return res.status(400).send({ msg: "User Not Found" });
