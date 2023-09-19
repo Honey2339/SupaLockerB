@@ -63,7 +63,7 @@ app.post("/api/login", async (req, res) => {
 app.post("/api/upload", upload.single("file"), async (req, res) => {
   try {
     const { originalname, buffer, mimetype } = req.file;
-    const username = req.cookies.username;
+    const username = req.body.username;
     const user = await User.findOne({ username });
 
     if (!user) {
